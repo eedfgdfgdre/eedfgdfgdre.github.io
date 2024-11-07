@@ -5,61 +5,196 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Coding Club - Home</title>
   <style>
-    body { font-family: Arial, sans-serif; }
-    header, footer { padding: 10px; background: #333; color: #fff; text-align: center; }
-    .container { padding: 20px; }
-    h1 { color: #333; }
-    ul {
-      list-style-type: none;
+    /* Reset default margin and padding */
+    * {
+      margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
-    li {
-      margin: 10px 0;
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f5f5;
+      color: #202124;
+      line-height: 1.6;
     }
-    a {
-      padding: 10px;
-      background: #0066cc;
+
+    header {
+      background-color: #4285f4;
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      margin-top: 5px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .intro h2 {
+      font-size: 30px;
+      color: #4285f4;
+    }
+
+    .intro p {
+      font-size: 18px;
+      color: #5f6368;
+      margin-top: 15px;
+    }
+
+    .btn {
+      padding: 15px 30px;
+      background-color: #34a853;
       color: white;
       text-decoration: none;
-      border-radius: 5px;
-      display: block;
+      border-radius: 30px;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
     }
-    a:hover { background: #005bb5; }
-    footer { margin-top: 40px; }
+
+    .btn:hover {
+      background-color: #0f9d58;
+    }
+
+    .languages {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+    }
+
+    .languages a {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      width: 200px;
+      text-align: center;
+      font-size: 18px;
+      color: #202124;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .languages a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      background-color: #f5f5f5;
+      color: #5f6368;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      border-top: 1px solid #ddd;
+    }
+
+    footer a {
+      color: #4285f4;
+      text-decoration: none;
+      transition: text-decoration 0.3s ease;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 30px;
+      }
+
+      .intro h2 {
+        font-size: 24px;
+      }
+
+      .intro p {
+        font-size: 16px;
+      }
+
+      .languages {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .languages a {
+        width: 90%;
+        margin-bottom: 10px;
+      }
+    }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Welcome to Coding Club!</h1>
+  <h1>Coding Club</h1>
+  <p>Welcome to your community of future coders!</p>
 </header>
 
 <div class="container">
-  <p>Choose a programming language to start learning and experimenting:</p>
+  <div class="intro">
+    <h2>Start your coding journey today!</h2>
+    <p>Join our club and dive into the world of programming. Whether you’re a beginner or an experienced developer, our club offers a variety of coding languages to explore.</p>
+    <a href="#languages" class="btn">Get Started</a>
+  </div>
 
-  <ul>
-    <li><a href="html.html">HTML</a></li>
-    <li><a href="css.html">CSS</a></li>
-    <li><a href="javascript.html">JavaScript</a></li>
-    <li><a href="python.html">Python</a></li>
-    <li><a href="java.html">Java</a></li>
-    <li><a href="cpp.html">C++</a></li>
-    <li><a href="php.html">PHP</a></li>
-    <li><a href="sql.html">SQL</a></li>
-    <li><a href="c.html">C</a></li>
-    <li><a href="go.html">Go</a></li>
-    <li><a href="datascience.html">Data Science</a></li>
-    <li><a href="kotlin.html">Kotlin</a></li>
-    <li><a href="bootstrap.html">Bootstrap</a></li>
-    <li><a href="csharp.html">C#</a></li>
-    <li><a href="rust.html">Rust</a></li>
-  </ul>
-  
-  <p>Explore various programming languages, see examples, and write your own code!</p>
+  <div id="languages" class="languages">
+    <a href="html.html">HTML</a>
+
+    <a href="css.html">CSS</a>
+
+    <a href="javascript.html">JavaScript</a>
+
+    <a href="python.html">Python</a>
+
+    <a href="java.html">Java</a>
+
+    <a href="cpp.html">C++</a>
+
+    <a href="php.html">PHP</a>
+
+    <a href="sql.html">SQL</a>
+
+    <a href="c.html">C</a>
+
+    <a href="go.html">Go</a>
+
+    <a href="datascience.html">Data Science</a>
+
+    <a href="kotlin.html">Kotlin</a>
+
+    <a href="bootstrap.html">Bootstrap</a>
+
+    <a href="csharp.html">C#</a>
+
+    <a href="rust.html">Rust</a>
+    
+  </div>
 </div>
 
 <footer>
   <p>&copy; 2024 Coding Club. All rights reserved.</p>
+  <p><a href="contact.html">Contact Us</a> | <a href="#languages">Explore More Languages</a></p>
 </footer>
 
 </body>
