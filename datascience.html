@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Science - Learn Data Science</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    header, footer { padding: 10px; background: #333; color: #fff; text-align: center; }
+    .container { padding: 20px; }
+    #editor { height: 300px; border: 1px solid #ddd; }
+    pre { padding: 10px; background: #f4f4f4; border: 1px solid #ddd; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Learn Data Science</h1>
+</header>
+
+<div class="container">
+  <h2>What is Data Science?</h2>
+  <p>Data Science is an interdisciplinary field that combines techniques from statistics, computer science, and domain knowledge to extract meaningful insights from data. Data scientists use a variety of methods, including machine learning, data mining, and statistical analysis, to make data-driven decisions and predictions.</p>
+
+  <p>Data science is used in a wide range of fields, including healthcare, finance, marketing, and technology. With the growth of big data, it has become one of the most sought-after fields in the tech industry.</p>
+
+  <h3>Basic Data Science Workflow:</h3>
+  <pre>
+    import pandas as pd
+    data = pd.read_csv("data.csv")
+    print(data.head())
+  </pre>
+
+  <h3>Try Your Data Science Code:</h3>
+  <div id="editor">import pandas as pd
+    data = pd.read_csv("data.csv")
+    print(data.head())</div>
+
+  <button onclick="runDataScience()">Run Code</button>
+  <pre id="output"></pre>
+
+  <br>
+  <a href="index.html">Back to Main Menu</a>
+</div>
+
+<footer>
+  <p>&copy; 2024 Coding Club. All rights reserved.</p>
+</footer>
+
+<script>
+  var editor = ace.edit("editor");
+  editor.session.setMode("ace/mode/python");
+
+  function runDataScience() {
+    alert('Data Science code executed!');
+    document.getElementById('output').textContent = 'Data Science output shown in the console!';
+  }
+</script>
+
+</body>
+</html>

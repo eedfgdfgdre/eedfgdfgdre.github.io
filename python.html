@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python - Learn Python</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    header, footer { padding: 10px; background: #333; color: #fff; text-align: center; }
+    .container { padding: 20px; }
+    #editor { height: 300px; border: 1px solid #ddd; }
+    pre { padding: 10px; background: #f4f4f4; border: 1px solid #ddd; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Learn Python</h1>
+</header>
+
+<div class="container">
+  <h2>What is Python?</h2>
+  <p>Python is a powerful, high-level programming language known for its simplicity and readability. Python is used in various fields, including web development, data science, machine learning, automation, and more. Its clear and concise syntax makes it a great choice for beginners, while its versatility makes it popular among experienced developers.</p>
+
+  <p>Python is an interpreted language, meaning that code is executed line by line, rather than being compiled into machine code. This allows for rapid development and testing. Python is also dynamically typed, meaning that you don’t need to specify variable types explicitly; the interpreter determines the type at runtime.</p>
+
+  <p>Python has an extensive standard library that includes modules for working with web requests, file systems, databases, and much more. Additionally, Python supports object-oriented, imperative, and functional programming styles, providing developers with the flexibility to write code in the style that best fits the task at hand.</p>
+
+  <p>Python is also the go-to language for data analysis, machine learning, and artificial intelligence. Libraries like NumPy, pandas, and TensorFlow have made Python the most popular language for data scientists and AI researchers. The Python ecosystem is vast, with thousands of third-party packages available through the Python Package Index (PyPI).</p>
+
+  <h3>Basic Python Syntax:</h3>
+  <pre>
+    def greet():
+        print("Hello, Python!")
+
+    greet()
+  </pre>
+
+  <h3>Python Functions:</h3>
+  <p>Functions in Python are defined using the <code>def</code> keyword, followed by the function name and parameters. Python functions are a great way to organize code and improve reusability. Functions can return values, and they can have default parameters.</p>
+  
+  <pre>
+    def add(a, b):
+        return a + b
+
+    print(add(5, 3))  # Output: 8
+  </pre>
+
+  <h3>Try Your Python Code:</h3>
+  <div id="editor">def greet():
+      print("Hello, Python!")
+    greet()</div>
+
+  <button onclick="runPython()">Run Python</button>
+  <pre id="output"></pre>
+
+  <br>
+  <a href="index.html">Back to Main Menu</a>
+</div>
+
+<footer>
+  <p>&copy; 2024 Coding Club. All rights reserved.</p>
+</footer>
+
+<script>
+  var editor = ace.edit("editor");
+  editor.session.setMode("ace/mode/python");
+
+  function runPython() {
+    alert('Python code executed!');
+    document.getElementById('output').textContent = 'Python output will be displayed in the console!';
+  }
+</script>
+
+</body>
+</html>

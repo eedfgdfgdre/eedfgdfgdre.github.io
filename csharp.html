@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C# - Learn C#</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+    <style>
+      body { font-family: Arial, sans-serif; }
+      header, footer { padding: 10px; background: #333; color: #fff; text-align: center; }
+      .container { padding: 20px; }
+      #editor { height: 300px; border: 1px solid #ddd; }
+      pre { padding: 10px; background: #f4f4f4; border: 1px solid #ddd; }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <h1>Learn C#</h1>
+    </header>
+
+    <div class="container">
+      <h2>What is C#?</h2>
+      <p>C# (C-Sharp) is a modern, object-oriented programming language developed by Microsoft. It is part of the .NET framework and is used primarily for developing Windows applications, web applications, and games using Unity.</p>
+
+      <p>C# features strong typing, garbage collection, and support for both functional and object-oriented programming. It is widely used in enterprise-level applications, game development with Unity, and web development with ASP.NET.</p>
+
+      <h3>Basic C# Syntax:</h3>
+      <pre>
+        using System;
+
+        class Program {
+          static void Main() {
+            Console.WriteLine("Hello, C#!");
+          }
+        }
+      </pre>
+
+      <h3>Try Your C# Code:</h3>
+      <div id="editor">using System;
+
+        class Program {
+          static void Main() {
+            Console.WriteLine("Hello, C#!");
+          }
+        }</div>
+
+      <button onclick="runCSharp()">Run C#</button>
+      <pre id="output"></pre>
+
+      <br>
+      <a href="index.html">Back to Main Menu</a>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Coding Club. All rights reserved.</p>
+    </footer>
+
+    <script>
+      var editor = ace.edit("editor");
+      editor.session.setMode("ace/mode/csharp");
+
+      function runCSharp() {
+        alert('C# code executed!');
+        document.getElementById('output').textContent = 'C# output shown in the console!';
+      }
+    </script>
+
+  </body>
+</html>

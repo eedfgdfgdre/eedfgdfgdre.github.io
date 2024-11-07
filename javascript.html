@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript - Learn JavaScript</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    header, footer { padding: 10px; background: #333; color: #fff; text-align: center; }
+    .container { padding: 20px; }
+    #editor { height: 300px; border: 1px solid #ddd; }
+    pre { padding: 10px; background: #f4f4f4; border: 1px solid #ddd; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Learn JavaScript</h1>
+</header>
+
+<div class="container">
+  <h2>What is JavaScript?</h2>
+  <p>JavaScript is a versatile, high-level programming language primarily used to create interactive effects within web browsers. It is one of the core technologies of the web, along with HTML and CSS, enabling dynamic features on websites such as interactive forms, animations, and real-time content updates.</p>
+
+  <p>Originally designed to run on the client-side (in the user's browser), JavaScript can now also be used on the server-side with technologies like Node.js. This makes JavaScript one of the most widely-used programming languages in the world, allowing developers to create full-stack applications with a single language.</p>
+
+  <p>JavaScript is known for being event-driven, meaning actions like mouse clicks, form submissions, or other user interactions can trigger functions or changes in the state of a page. JavaScript is also asynchronous, using callbacks and promises to handle tasks that take time, such as retrieving data from a server.</p>
+
+  <p>Over time, JavaScript has evolved with the introduction of new features, such as ES6 (ECMAScript 2015), which added new syntax like arrow functions, classes, and modules. Today, JavaScript is used not only for web development but also in building mobile applications (via frameworks like React Native), desktop applications, and even machine learning (with TensorFlow.js).</p>
+
+  <h3>Basic JavaScript Syntax:</h3>
+  <pre>
+    function greet() {
+      alert('Hello, JavaScript!');
+    }
+    greet();
+  </pre>
+
+  <h3>JavaScript Functions:</h3>
+  <p>Functions in JavaScript are reusable blocks of code designed to perform specific tasks. A function can take inputs, perform an operation, and return a result. Functions are essential for organizing your code, reducing repetition, and making your code more modular and maintainable.</p>
+  
+  <pre>
+    function add(a, b) {
+      return a + b;
+    }
+
+    console.log(add(5, 3)); // Output: 8
+  </pre>
+
+  <h3>Try Your JavaScript Code:</h3>
+  <div id="editor">function greet() {
+      alert('Hello, JavaScript!');
+    }
+    greet();</div>
+
+  <button onclick="runJS()">Run JavaScript</button>
+  <pre id="output"></pre>
+
+  <br>
+  <a href="index.html">Back to Main Menu</a>
+</div>
+
+<footer>
+  <p>&copy; 2024 Coding Club. All rights reserved.</p>
+</footer>
+
+<script>
+  var editor = ace.edit("editor");
+  editor.session.setMode("ace/mode/javascript");
+
+  function runJS() {
+    alert('JavaScript executed!');
+    document.getElementById('output').textContent = 'JavaScript output shown in the alert box!';
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PHP - Learn PHP</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    header, footer { padding: 10px; background: #333; color: #fff; text-align: center; }
+    .container { padding: 20px; }
+    #editor { height: 300px; border: 1px solid #ddd; }
+    pre { padding: 10px; background: #f4f4f4; border: 1px solid #ddd; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Learn PHP</h1>
+</header>
+
+<div class="container">
+  <h2>What is PHP?</h2>
+  <p>PHP is a server-side scripting language primarily used for web development. It is widely used for creating dynamic websites and web applications. PHP can generate HTML, manage databases, send emails, and handle form data.</p>
+
+  <p>PHP is known for its simplicity and ease of use. It runs on most web servers and is integrated with popular databases like MySQL. It is a common choice for developing content management systems (CMS) like WordPress and Joomla.</p>
+
+  <h3>Basic PHP Syntax:</h3>
+  <pre>
+    <?php
+      echo "Hello, PHP!";
+    ?>
+  </pre>
+
+  <h3>Try Your PHP Code:</h3>
+  <div id="editor">echo "Hello, PHP!";</div>
+
+  <button onclick="runPHP()">Run PHP</button>
+  <pre id="output"></pre>
+
+  <br>
+  <a href="index.html">Back to Main Menu</a>
+</div>
+
+<footer>
+  <p>&copy; 2024 Coding Club. All rights reserved.</p>
+</footer>
+
+<script>
+  var editor = ace.edit("editor");
+  editor.session.setMode("ace/mode/php");
+
+  function runPHP() {
+    alert('PHP code executed!');
+    document.getElementById('output').textContent = 'PHP output shown in the console!';
+  }
+</script>
+
+</body>
+</html>

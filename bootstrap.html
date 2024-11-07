@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap - Learn Bootstrap</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    header, footer { padding: 10px; background: #333; color: #fff; text-align: center; }
+    .container { padding: 20px; }
+    #editor { height: 300px; border: 1px solid #ddd; }
+    pre { padding: 10px; background: #f4f4f4; border: 1px solid #ddd; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Learn Bootstrap</h1>
+</header>
+
+<div class="container">
+  <h2>What is Bootstrap?</h2>
+  <p>Bootstrap is an open-source front-end framework designed to make web development faster and easier. It provides a collection of reusable components such as navigation bars, buttons, forms, and grids, which are ready to use out of the box.</p>
+
+  <p>Bootstrap is responsive by default, meaning that it automatically adapts the layout of a webpage to fit the size of the screen, whether it's a desktop, tablet, or smartphone. It also includes support for modern web development technologies such as HTML5, CSS3, and JavaScript.</p>
+
+  <h3>Basic Bootstrap Syntax:</h3>
+  <pre>
+    <button class="btn btn-primary">Click Me</button>
+  </pre>
+
+  <h3>Try Your Bootstrap Code:</h3>
+  <div id="editor">&lt;button class="btn btn-primary"&gt;Click Me&lt;/button&gt;</div>
+
+  <button onclick="runBootstrap()">Run Bootstrap</button>
+  <pre id="output"></pre>
+
+  <br>
+  <a href="index.html">Back to Main Menu</a>
+</div>
+
+<footer>
+  <p>&copy; 2024 Coding Club. All rights reserved.</p>
+</footer>
+
+<script>
+  var editor = ace.edit("editor");
+  editor.session.setMode("ace/mode/html");
+
+  function runBootstrap() {
+    alert('Bootstrap code executed!');
+    document.getElementById('output').textContent = 'Bootstrap output shown in the console!';
+  }
+</script>
+
+</body>
+</html>

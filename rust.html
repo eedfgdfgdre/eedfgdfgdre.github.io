@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rust - Learn Rust</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+    <style>
+      body { font-family: Arial, sans-serif; }
+      header, footer { padding: 10px; background: #333; color: #fff; text-align: center; }
+      .container { padding: 20px; }
+      #editor { height: 300px; border: 1px solid #ddd; }
+      pre { padding: 10px; background: #f4f4f4; border: 1px solid #ddd; }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <h1>Learn Rust</h1>
+    </header>
+
+    <div class="container">
+      <h2>What is Rust?</h2>
+      <p>Rust is a systems programming language focused on safety, speed, and concurrency. It was designed to ensure memory safety without needing a garbage collector, making it ideal for performance-critical applications, such as embedded systems, operating systems, and game engines.</p>
+
+      <p>Rust combines modern features, such as pattern matching, type inference, and multi-threading, with a strong emphasis on preventing memory leaks, race conditions, and other issues common in low-level programming.</p>
+
+      <h3>Basic Rust Syntax:</h3>
+      <pre>
+        fn main() {
+          println!("Hello, Rust!");
+        }
+      </pre>
+
+      <h3>Try Your Rust Code:</h3>
+      <div id="editor">fn main() {
+        println!("Hello, Rust!");
+      }</div>
+
+      <button onclick="runRust()">Run Rust</button>
+      <pre id="output"></pre>
+
+      <br>
+      <a href="index.html">Back to Main Menu</a>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Coding Club. All rights reserved.</p>
+    </footer>
+
+    <script>
+      var editor = ace.edit("editor");
+      editor.session.setMode("ace/mode/rust");
+
+      function runRust() {
+        alert('Rust code executed!');
+        document.getElementById('output').textContent = 'Rust output shown in the console!';
+      }
+    </script>
+
+  </body>
+</html>

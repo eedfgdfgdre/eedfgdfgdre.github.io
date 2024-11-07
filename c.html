@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C - Learn C</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    header, footer { padding: 10px; background: #333; color: #fff; text-align: center; }
+    .container { padding: 20px; }
+    #editor { height: 300px; border: 1px solid #ddd; }
+    pre { padding: 10px; background: #f4f4f4; border: 1px solid #ddd; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Learn C</h1>
+</header>
+
+<div class="container">
+  <h2>What is C?</h2>
+  <p>C is one of the most widely used general-purpose programming languages. Developed in the early 1970s by Dennis Ritchie, it became the foundation for many modern programming languages like C++, C#, and Java. C is particularly known for its efficiency, system-level programming, and low-level access to memory.</p>
+
+  <p>Often used for system programming, embedded systems, operating systems, and compiling other programming languages, C remains essential for understanding how computers operate at a low level. C is often taught as the "mother" of modern programming languages.</p>
+
+  <h3>Basic C Syntax:</h3>
+  <pre>
+    #include <stdio.h>
+
+    int main() {
+      printf("Hello, C!");
+      return 0;
+    }
+  </pre>
+
+  <h3>Try Your C Code:</h3>
+  <div id="editor">#include &lt;stdio.h&gt;
+
+    int main() {
+      printf("Hello, C!");
+      return 0;
+    }</div>
+
+  <button onclick="runC()">Run C</button>
+  <pre id="output"></pre>
+
+  <br>
+  <a href="index.html">Back to Main Menu</a>
+</div>
+
+<footer>
+  <p>&copy; 2024 Coding Club. All rights reserved.</p>
+</footer>
+
+<script>
+  var editor = ace.edit("editor");
+  editor.session.setMode("ace/mode/c_cpp");
+
+  function runC() {
+    alert('C code executed!');
+    document.getElementById('output').textContent = 'C output shown in the console!';
+  }
+</script>
+
+</body>
+</html>

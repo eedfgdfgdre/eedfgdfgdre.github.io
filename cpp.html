@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C++ - Learn C++</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    header, footer { padding: 10px; background: #333; color: #fff; text-align: center; }
+    .container { padding: 20px; }
+    #editor { height: 300px; border: 1px solid #ddd; }
+    pre { padding: 10px; background: #f4f4f4; border: 1px solid #ddd; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Learn C++</h1>
+</header>
+
+<div class="container">
+  <h2>What is C++?</h2>
+  <p>C++ is a high-performance, object-oriented programming language created by Bjarne Stroustrup as an extension of C. C++ is widely used in system software, game development, real-time applications, and other resource-intensive programs where performance is critical.</p>
+
+  <p>C++ includes features like memory management, low-level manipulation, and object-oriented programming. It is one of the fastest languages due to its ability to access and manipulate hardware directly, making it an excellent choice for performance-critical applications.</p>
+
+  <h3>Basic C++ Syntax:</h3>
+  <pre>
+    #include <iostream>
+    using namespace std;
+
+    int main() {
+      cout << "Hello, C++!" << endl;
+      return 0;
+    }
+  </pre>
+
+  <h3>Try Your C++ Code:</h3>
+  <div id="editor">#include &lt;iostream&gt;
+    using namespace std;
+
+    int main() {
+      cout &lt;&lt; "Hello, C++!" &lt;&lt; endl;
+      return 0;
+    }</div>
+
+  <button onclick="runCpp()">Run C++</button>
+  <pre id="output"></pre>
+
+  <br>
+  <a href="index.html">Back to Main Menu</a>
+</div>
+
+<footer>
+  <p>&copy; 2024 Coding Club. All rights reserved.</p>
+</footer>
+
+<script>
+  var editor = ace.edit("editor");
+  editor.session.setMode("ace/mode/c_cpp");
+
+  function runCpp() {
+    alert('C++ code executed!');
+    document.getElementById('output').textContent = 'C++ output shown in the console!';
+  }
+</script>
+
+</body>
+</html>

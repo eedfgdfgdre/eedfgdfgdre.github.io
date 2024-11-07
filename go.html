@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Go - Learn Go</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    header, footer { padding: 10px; background: #333; color: #fff; text-align: center; }
+    .container { padding: 20px; }
+    #editor { height: 300px; border: 1px solid #ddd; }
+    pre { padding: 10px; background: #f4f4f4; border: 1px solid #ddd; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Learn Go</h1>
+</header>
+
+<div class="container">
+  <h2>What is Go?</h2>
+  <p>Go (or Golang) is an open-source, statically typed programming language developed by Google. Known for its simplicity, high performance, and scalability, Go is used in backend systems, cloud computing, and large-scale applications. It features strong support for concurrency, making it ideal for modern multi-core systems.</p>
+
+  <p>Go's minimalist design, fast compilation, and easy deployment make it a favorite for many developers working on web servers, networking tools, and microservices. It also has a powerful standard library and a vibrant ecosystem of third-party libraries.</p>
+
+  <h3>Basic Go Syntax:</h3>
+  <pre>
+    package main
+    import "fmt"
+
+    func main() {
+      fmt.Println("Hello, Go!")
+    }
+  </pre>
+
+  <h3>Try Your Go Code:</h3>
+  <div id="editor">package main
+    import "fmt"
+
+    func main() {
+      fmt.Println("Hello, Go!")
+    }</div>
+
+  <button onclick="runGo()">Run Go</button>
+  <pre id="output"></pre>
+
+  <br>
+  <a href="index.html">Back to Main Menu</a>
+</div>
+
+<footer>
+  <p>&copy; 2024 Coding Club. All rights reserved.</p>
+</footer>
+
+<script>
+  var editor = ace.edit("editor");
+  editor.session.setMode("ace/mode/go");
+
+  function runGo() {
+    alert('Go code executed!');
+    document.getElementById('output').textContent = 'Go output shown in the console!';
+  }
+</script>
+
+</body>
+</html>

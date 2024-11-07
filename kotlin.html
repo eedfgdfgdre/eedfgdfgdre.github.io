@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kotlin - Learn Kotlin</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    header, footer { padding: 10px; background: #333; color: #fff; text-align: center; }
+    .container { padding: 20px; }
+    #editor { height: 300px; border: 1px solid #ddd; }
+    pre { padding: 10px; background: #f4f4f4; border: 1px solid #ddd; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Learn Kotlin</h1>
+</header>
+
+<div class="container">
+  <h2>What is Kotlin?</h2>
+  <p>Kotlin is a modern, statically typed programming language developed by JetBrains. It is designed to be fully interoperable with Java, but with more concise syntax and improved features. Kotlin is widely used for Android app development, as it offers more safety features, such as nullability checks, than Java.</p>
+
+  <p>Kotlin combines the best features of both functional and object-oriented programming. It is concise, expressive, and designed to be an improvement over Java, while still maintaining full compatibility with Java-based systems and libraries.</p>
+
+  <h3>Basic Kotlin Syntax:</h3>
+  <pre>
+    fun main() {
+      println("Hello, Kotlin!")
+    }
+  </pre>
+
+  <h3>Try Your Kotlin Code:</h3>
+  <div id="editor">fun main() {
+      println("Hello, Kotlin!")
+    }</div>
+
+  <button onclick="runKotlin()">Run Kotlin</button>
+  <pre id="output"></pre>
+
+  <br>
+  <a href="index.html">Back to Main Menu</a>
+</div>
+
+<footer>
+  <p>&copy; 2024 Coding Club. All rights reserved.</p>
+</footer>
+
+<script>
+  var editor = ace.edit("editor");
+  editor.session.setMode("ace/mode/kotlin");
+
+  function runKotlin() {
+    alert('Kotlin code executed!');
+    document.getElementById('output').textContent = 'Kotlin output shown in the console!';
+  }
+</script>
+
+</body>
+</html>

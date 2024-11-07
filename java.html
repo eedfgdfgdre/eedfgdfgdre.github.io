@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Java - Learn Java</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    header, footer { padding: 10px; background: #333; color: #fff; text-align: center; }
+    .container { padding: 20px; }
+    #editor { height: 300px; border: 1px solid #ddd; }
+    pre { padding: 10px; background: #f4f4f4; border: 1px solid #ddd; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Learn Java</h1>
+</header>
+
+<div class="container">
+  <h2>What is Java?</h2>
+  <p>Java is a widely-used object-oriented programming language that allows developers to write software that can run on any device with the Java Runtime Environment (JRE). Originally developed by Sun Microsystems, it is now maintained by Oracle Corporation. Java is known for its portability, scalability, and robust security features.</p>
+
+  <p>Java is commonly used in web development, Android applications, enterprise software, and big data technologies. Java follows the "write once, run anywhere" philosophy, meaning that once you compile your Java code into bytecode, it can run on any platform with a compatible JVM (Java Virtual Machine).</p>
+
+  <h3>Basic Java Syntax:</h3>
+  <pre>
+    public class HelloWorld {
+      public static void main(String[] args) {
+        System.out.println("Hello, Java!");
+      }
+    }
+  </pre>
+
+  <h3>Try Your Java Code:</h3>
+  <div id="editor">public class HelloWorld {
+      public static void main(String[] args) {
+        System.out.println("Hello, Java!");
+      }
+    }</div>
+
+  <button onclick="runJava()">Run Java</button>
+  <pre id="output"></pre>
+
+  <br>
+  <a href="index.html">Back to Main Menu</a>
+</div>
+
+<footer>
+  <p>&copy; 2024 Coding Club. All rights reserved.</p>
+</footer>
+
+<script>
+  var editor = ace.edit("editor");
+  editor.session.setMode("ace/mode/java");
+
+  function runJava() {
+    alert('Java code executed!');
+    document.getElementById('output').textContent = 'Java output shown in the console!';
+  }
+</script>
+
+</body>
+</html>

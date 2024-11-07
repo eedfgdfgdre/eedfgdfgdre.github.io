@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML - Learn HTML</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    header, footer { padding: 10px; background: #333; color: #fff; text-align: center; }
+    .container { padding: 20px; }
+    #editor { height: 300px; border: 1px solid #ddd; }
+    pre { padding: 10px; background: #f4f4f4; border: 1px solid #ddd; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Learn HTML</h1>
+</header>
+
+<div class="container">
+  <h2>What is HTML?</h2>
+  <p>HTML (Hypertext Markup Language) is the foundational language for creating web pages. It is used to define the structure and layout of a webpage, allowing content such as text, images, and videos to be displayed in a browser. HTML works as the skeleton of a webpage, with other technologies like CSS (for design) and JavaScript (for interactivity) building on top of it.</p>
+
+  <p>HTML documents consist of elements, often referred to as tags. A tag is typically written in angle brackets, like &lt;html&gt;, &lt;div&gt;, or &lt;h1&gt;. These tags help define the content on the page. Tags can be paired (opening and closing), where the opening tag might be &lt;p&gt; for a paragraph, and the closing tag would be &lt;/p&gt; to signify the end of that element.</p>
+
+  <p>HTML is constantly evolving, with new versions being released periodically. The latest version, HTML5, has introduced several new features and elements, such as &lt;article&gt;, &lt;section&gt;, and &lt;header&gt;. These elements help developers structure web pages in a more semantic manner, improving accessibility and SEO (Search Engine Optimization).</p>
+
+  <p>HTML also works hand-in-hand with other web technologies. CSS (Cascading Style Sheets) is used to style the HTML elements, adjusting things like colors, fonts, and layouts. JavaScript is used to add dynamic functionality, such as form validation, animations, and interactive content. While HTML alone can create a basic webpage, the combination of HTML, CSS, and JavaScript enables the creation of fully interactive, visually appealing websites.</p>
+
+  <h3>HTML Document Structure:</h3>
+  <pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+      &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;h1&gt;Welcome to the Website&lt;/h1&gt;
+        &lt;p&gt;This is an example paragraph.&lt;/p&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+  </pre>
+
+  <h3>HTML Syntax:</h3>
+  <p>HTML syntax consists of elements that have a specific structure:</p>
+  <ul>
+    <li><strong>Tags:</strong> HTML elements are enclosed in angle brackets. For example, &lt;h1&gt; represents a header, and &lt;p&gt; represents a paragraph.</li>
+    <li><strong>Attributes:</strong> Tags can contain attributes, like class, id, or href, to provide additional information. For example, &lt;a href="https://www.example.com"&gt;Click here&lt;/a&gt;.</li>
+    <li><strong>Closing Tags:</strong> Most tags have an opening and closing tag, such as &lt;p&gt; and &lt;/p&gt;. However, some elements, like &lt;br&gt; for a line break or &lt;img&gt; for an image, are self-closing.</li>
+  </ul>
+
+  <h3>Common HTML Elements:</h3>
+  <ul>
+    <li>&lt;h1&gt; to &lt;h6&gt;: Headings, from largest (&lt;h1&gt;) to smallest (&lt;h6&gt;).</li>
+    <li>&lt;p&gt;: Paragraph.</li>
+    <li>&lt;a&gt;: Anchor for links.</li>
+    <li>&lt;ul&gt; and &lt;ol&gt;: Unordered and ordered lists.</li>
+    <li>&lt;div&gt;: A container for grouping content.</li>
+  </ul>
+
+  <h3>HTML Example:</h3>
+  <pre>
+    &lt;html&gt;
+      &lt;head&gt;
+        &lt;title&gt;Learning HTML&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;h1&gt;Welcome to Learning HTML&lt;/h1&gt;
+        &lt;p&gt;HTML is easy to learn and use for building web pages.&lt;/p&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+  </pre>
+
+  <h3>Try Your HTML Code:</h3>
+  <div id="editor">&lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;Learning HTML&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;h1&gt;Welcome to Learning HTML&lt;/h1&gt;
+      &lt;p&gt;HTML is easy to learn and use for building web pages.&lt;/p&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;</div>
+
+  <button onclick="runHTML()">Run HTML</button>
+  <pre id="output"></pre>
+
+  <br>
+  <a href="index.html">Back to Main Menu</a>
+</div>
+
+<footer>
+  <p>&copy; 2024 Coding Club. All rights reserved.</p>
+</footer>
+
+<script>
+  var editor = ace.edit("editor");
+  editor.session.setMode("ace/mode/html");
+
+  function runHTML() {
+    alert('HTML code executed!');
+    document.getElementById('output').textContent = 'You can preview HTML directly in the browser!';
+  }
+</script>
+
+</body>
+</html>

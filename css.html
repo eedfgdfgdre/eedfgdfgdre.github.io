@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS - Learn CSS</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    header, footer { padding: 10px; background: #333; color: #fff; text-align: center; }
+    .container { padding: 20px; }
+    #editor { height: 300px; border: 1px solid #ddd; }
+    pre { padding: 10px; background: #f4f4f4; border: 1px solid #ddd; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Learn CSS</h1>
+</header>
+
+<div class="container">
+  <h2>What is CSS?</h2>
+  <p>CSS (Cascading Style Sheets) is the language used to describe the presentation of a document written in HTML. While HTML defines the content and structure of a webpage, CSS handles how that content is visually displayed. CSS allows you to control the layout, colors, fonts, and spacing of elements on a page.</p>
+
+  <p>CSS works by targeting HTML elements using selectors. Once a selector targets an element, CSS properties are applied to define how that element should appear. For example, you can change the color of a heading, adjust the font size of a paragraph, or set the background color of a div. CSS properties can be as simple as defining color or font, or as complex as creating responsive layouts with grid and flexbox.</p>
+
+  <p>In addition to visual styling, CSS is responsible for creating responsive designs. Media queries in CSS allow a webpage to adapt to different screen sizes, ensuring a good user experience on desktops, tablets, and mobile devices. Modern CSS features like Flexbox and Grid provide powerful tools to create complex layouts without relying on external libraries.</p>
+
+  <p>CSS is often written in an external stylesheet, which is linked to the HTML document, allowing the styles to be reused across multiple pages. This separation of concerns between content (HTML) and presentation (CSS) ensures better maintainability and a cleaner codebase.</p>
+
+  <h3>Basic CSS Syntax:</h3>
+  <pre>
+    p {
+      color: blue;
+      font-size: 16px;
+    }
+  </pre>
+
+  <h3>Common CSS Properties:</h3>
+  <ul>
+    <li><strong>color:</strong> Specifies the text color of an element.</li>
+    <li><strong>font-size:</strong> Defines the size of the text.</li>
+    <li><strong>background-color:</strong> Sets the background color of an element.</li>
+    <li><strong>margin:</strong> Controls the space outside an element.</li>
+    <li><strong>padding:</strong> Adjusts the space inside an element.</li>
+  </ul>
+
+  <h3>Try Your CSS Code:</h3>
+  <div id="editor">body { font-family: Arial, sans-serif; }
+h1 { color: red; }</div>
+
+  <button onclick="runCSS()">Run CSS</button>
+  <pre id="output"></pre>
+
+  <br>
+  <a href="index.html">Back to Main Menu</a>
+</div>
+
+<footer>
+  <p>&copy; 2024 Coding Club. All rights reserved.</p>
+</footer>
+
+<script>
+  var editor = ace.edit("editor");
+  editor.session.setMode("ace/mode/css");
+
+  function runCSS() {
+    alert('CSS code executed!');
+    document.getElementById('output').textContent = 'CSS will style the elements accordingly.';
+  }
+</script>
+
+</body>
+</html>
